@@ -1,0 +1,171 @@
+@use "../abstracts/mixin" as *;
+
+#Game {
+  background-image: linear-gradient(
+    to bottom,
+    #1e528e 0%,
+    #728a7c 50%,
+    #e9ce5d 100%
+  );
+
+  &::before {
+    @include pseudoElement();
+  }
+
+  .hensContent {
+    position: relative;
+
+    &::before {
+      @include pseudoElement(100%, 20px, $t: 85px, $l: 0);
+      background-color: #333;
+
+      @include responsive(350) {
+        @include pseudoElement(100%, 20px, $t: 35px, $l: 0);
+      }
+    }
+
+    .henItem {
+      @include position($t: 0, $l: 0);
+      transform: translateX(-50%);
+      @for $i from 0 through 3 {
+        &:nth-of-type(#{$i}) {
+          left: #{$i * 25%};
+        }
+      }
+
+      @include responsive(350) {
+        width: 33.33%;
+
+        &:nth-of-type(1) {
+          left: 20%;
+        }
+
+        &:nth-of-type(3) {
+          left: 80%;
+        }
+      }
+
+      img {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+        display: block;
+        margin: auto;
+        @include responsive(350) {
+          width: 50px;
+        }
+      }
+
+      i {
+        @include position($t: 50%, $l: 50%);
+        transform: translateX(-50%);
+        color: #fff;
+
+        @include responsive(350) {
+          font-size: 12px;
+            left: 45%;
+        }
+
+        @include responsive(650) {
+          font-size: 12px;
+            left: 48%;
+        }
+      }
+    }
+  }
+
+  .brokenEggContent {
+    height: 100px;
+    @include position($l: 0, $b: 10px);
+    width: 100%;
+    z-index: 1;
+
+    @include responsive(350){
+        top: 93%;
+    }
+
+    .brokenEgg {
+      display: none;
+      @include position($t: 0, $l: 0);
+      transform: translateX(-50%);
+
+      
+
+      @for $i from 0 through 3 {
+        &:nth-of-type(#{$i}) {
+          left: #{$i * 25%};
+        }
+      }
+
+      @include responsive(350) {
+        width: 33.33%;
+
+        &:nth-of-type(1) {
+          left: 20%;
+        }
+
+        &:nth-of-type(3) {
+          left: 80%;
+        }
+      }
+
+      img {
+        width: 100px;
+
+        @include responsive(350) {
+          width: 50px;
+          display: block;
+          margin: auto;
+        }
+
+         &:nth-of-type(1) {
+          left: 20%;
+        }
+
+        &:nth-of-type(3) {
+          left: 80%;
+        }
+      }
+    }
+  }
+
+  .startGame {
+    cursor: pointer;
+    transform: translateY(-50%);
+    h5 {
+      padding-block: 15px;
+      margin: 0;
+      font-size: 25px;
+
+      @include responsive(350) {
+        padding-block: 8px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .basket {
+    width: 12%;
+    transform: translate(-50%, 150%);
+    @include position($t: 50%, $l: 50%);
+
+    @include responsive(350) {
+      width: 70px;
+      top: 75%;
+    }
+
+    span {
+      top: 85%;
+      transform: translate(-50%, -50%);
+      font-size: 22px;
+
+      @include responsive(350) {
+        display: none;
+      }
+    }
+  }
+
+  .bottomImg {
+    transform: translateY(20%);
+  }
+}

@@ -1,0 +1,242 @@
+.navColor {
+  background-color: #4b0082;
+}
+
+#Game {
+  background-image: linear-gradient(to bottom, #1e528e 0%, #728a7c 50%, #e9ce5d 100%);
+}
+#Game::before {
+  content: "";
+  width: initial;
+  height: initial;
+  position: absolute;
+  top: initial;
+  left: initial;
+  right: initial;
+  bottom: initial;
+}
+#Game .hensContent {
+  position: relative;
+}
+#Game .hensContent::before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  right: initial;
+  bottom: initial;
+  background-color: #333;
+}
+@media (max-width: 1300px) {
+  #Game .hensContent::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: initial;
+    bottom: initial;
+  }
+}
+#Game .hensContent .henItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: initial;
+  right: initial;
+  transform: translateX(-50%);
+}
+#Game .hensContent .henItem:nth-of-type(0) {
+  left: 0%;
+}
+#Game .hensContent .henItem:nth-of-type(1) {
+  left: 25%;
+}
+#Game .hensContent .henItem:nth-of-type(2) {
+  left: 50%;
+}
+#Game .hensContent .henItem:nth-of-type(3) {
+  left: 75%;
+}
+@media (max-width: 1300px) {
+  #Game .hensContent .henItem {
+    width: 33.33%;
+  }
+  #Game .hensContent .henItem:nth-of-type(1) {
+    left: 20%;
+  }
+  #Game .hensContent .henItem:nth-of-type(3) {
+    left: 80%;
+  }
+}
+#Game .hensContent .henItem img {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+@media (max-width: 1300px) {
+  #Game .hensContent .henItem img {
+    width: 50px;
+  }
+}
+#Game .hensContent .henItem i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: initial;
+  right: initial;
+  transform: translateX(-50%);
+  color: #fff;
+}
+@media (max-width: 1300px) {
+  #Game .hensContent .henItem i {
+    font-size: 12px;
+    left: 45%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Game .hensContent .henItem i {
+    font-size: 12px;
+    left: 48%;
+  }
+}
+#Game .brokenEggContent {
+  height: 100px;
+  position: absolute;
+  top: initial;
+  left: 0;
+  bottom: 10px;
+  right: initial;
+  width: 100%;
+  z-index: 1;
+}
+@media (max-width: 1300px) {
+  #Game .brokenEggContent {
+    top: 93%;
+  }
+}
+#Game .brokenEggContent .brokenEgg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: initial;
+  right: initial;
+  transform: translateX(-50%);
+}
+#Game .brokenEggContent .brokenEgg:nth-of-type(0) {
+  left: 0%;
+}
+#Game .brokenEggContent .brokenEgg:nth-of-type(1) {
+  left: 25%;
+}
+#Game .brokenEggContent .brokenEgg:nth-of-type(2) {
+  left: 50%;
+}
+#Game .brokenEggContent .brokenEgg:nth-of-type(3) {
+  left: 75%;
+}
+@media (max-width: 1300px) {
+  #Game .brokenEggContent .brokenEgg {
+    width: 33.33%;
+  }
+  #Game .brokenEggContent .brokenEgg:nth-of-type(1) {
+    left: 20%;
+  }
+  #Game .brokenEggContent .brokenEgg:nth-of-type(3) {
+    left: 80%;
+  }
+}
+#Game .brokenEggContent .brokenEgg img {
+  width: 100px;
+}
+@media (max-width: 1300px) {
+  #Game .brokenEggContent .brokenEgg img {
+    width: 50px;
+    display: block;
+    margin: auto;
+  }
+}
+#Game .brokenEggContent .brokenEgg img:nth-of-type(1) {
+  left: 20%;
+}
+#Game .brokenEggContent .brokenEgg img:nth-of-type(3) {
+  left: 80%;
+}
+#Game .startGame {
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+#Game .startGame h5 {
+  padding-block: 15px;
+  margin: 0;
+  font-size: 25px;
+}
+@media (max-width: 1300px) {
+  #Game .startGame h5 {
+    padding-block: 8px;
+    font-size: 18px;
+  }
+}
+#Game .basket {
+  width: 12%;
+  transform: translate(-50%, 150%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: initial;
+  right: initial;
+}
+@media (max-width: 1300px) {
+  #Game .basket {
+    width: 70px;
+    top: 75%;
+  }
+}
+#Game .basket span {
+  top: 85%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+}
+@media (max-width: 1300px) {
+  #Game .basket span {
+    display: none;
+  }
+}
+#Game .bottomImg {
+  transform: translateY(20%);
+}
+
+nav h5 {
+  font-size: 25px;
+}
+@media (max-width: 1300px) {
+  nav h5 {
+    font-size: 14px;
+  }
+  nav h5 .controlText {
+    display: block;
+    margin-top: 8px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  nav h5 {
+    font-size: initial;
+  }
+  nav h5 .controlText {
+    display: inline;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 992) and (max-width: 1300px) {
+  nav h5 {
+    font-size: 25px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

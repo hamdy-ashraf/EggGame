@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- Game Section -->
+    <section id="Game" class="vh-100 position-relative overflow-hidden">
+      <!-- Navbar Section -->
+      <nav class="text-center navColor text-light py-3">
+        <h5 class="mb-0">
+          Score : <span class="score">0</span> |
+          <span class="text-danger">Life Score</span> :
+          <span class="lifeScore">5</span> | Highest Score :
+          <span class="highestScore">0</span> | <span class="controlText">Use mouse to control</span>
+        </h5>
+      </nav>
+
+      <!-- Chicken Content -->
+      <div
+        class="hensContent d-flex justify-content-evenly mt-4 position-relative"
+      >
+        <div class="henItem">
+          <img
+            src="./eggGame_images/hen-right.png"
+            class="img-fluid"
+            alt=""
+          />
+          <i class="fas fa-egg egg"></i>
+        </div>
+        <div class="henItem">
+          <img
+            src="./eggGame_images/hen-right.png"
+            class="img-fluid"
+            alt=""
+          />
+          <i class="fas fa-egg egg"></i>
+        </div>
+        <div class="henItem">
+          <img
+            src="./eggGame_images/hen-right.png"
+            class="img-fluid"
+            alt=""
+          />
+          <i class="fas fa-egg egg"></i>
+        </div>
+      </div>
+
+      <!-- Broken Egg Content -->
+      <div class="brokenEggContent">
+        <div class="brokenEgg">
+          <img src="./eggGame_images/brokenEgg.png" class="img-fluid" alt="" />
+        </div>
+        <div class="brokenEgg">
+          <img src="./eggGame_images/brokenEgg.png" class="img-fluid" alt="" />
+        </div>
+        <div class="brokenEgg">
+          <img src="./eggGame_images/brokenEgg.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+
+      <!-- Start & Again Game text -->
+      <div class="startGame position-absolute top-50 start-0 w-100">
+        <h5 class="bg-success text-center text-light">Start Game</h5>
+      </div>
+
+      <!-- Basket -->
+      <div class="basket">
+        <img src="eggGame_images/basket2.png" class="img-fluid" alt="" />
+        <span class="score position-absolute start-50 text-light fw-bold"
+          >0</span
+        >
+      </div>
+
+      <!-- Bottom Image -->
+      <div class="bottomImg position-absolute bottom-0 start-0">
+        <img src="./eggGame_images/Easter-Eggs.png" class="img-fluid" alt="" />
+      </div>
+    </section>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

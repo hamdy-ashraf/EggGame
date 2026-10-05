@@ -1,0 +1,27 @@
+@use "../abstracts/mixin" as *;
+
+nav {
+  h5 {
+    font-size: 25px;
+    @include responsive(350) {
+      font-size: 14px;
+
+      .controlText {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+
+    @include responsive(650) {
+      font-size: initial;
+      .controlText {
+        display: inline;
+        margin-top: 0px;
+      }
+    }
+
+    @include responsive(1050) {
+      font-size: 25px;
+    }
+  }
+}
